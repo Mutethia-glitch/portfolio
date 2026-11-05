@@ -1,6 +1,6 @@
 # Mutethia — Kinetic Developer Portfolio
 
-Cinematic interactive developer portfolio with a 3D canvas-rendered orbital hero, autoplay/manual animated project slideshow, cursor-responsive 3D browser cards, scroll reveals, four dedicated case studies, accessible navigation and mobile support.
+Cinematic interactive developer portfolio with a red-orange editorial hero, a canvas-rendered orbital scene and a second procedural anatomical-style 3D spine. As visitors scroll, project cards are arranged as rotating staircase steps; connected nerve roots carry animated light pulses toward the focused project. Earlier cards recede and fade. Four case studies and a separate project archive remain accessible.
 
 ## Run locally
 
@@ -14,6 +14,14 @@ No build tools, secrets, package manager, or backend are required. Run `python3 
 - Realtor: actual Home Harmony Hub design prototype used as Realtor's visual design baseline, not a production deployed system.
 
 All screenshot URLs are in `app.js` and in their associated `work/*/index.html` pages. Replace with approved first-party screenshot files for best performance, especially before a formal portfolio launch.
+
+## The Anatomy of Work — spine experience
+
+- `spine-experience.js` generates individually shaped vertebral bodies, discs, posterior arches and processes, a spinal cord, nerve roots and project-connected light pulses using perspective projection and layered canvas shading. This is a **creative anatomical-style 3D rendering**, not a clinical or medically precise reconstruction, and does not import/download anatomy models.
+- Desktop: a 470svh scroll track with a sticky scene. Four project cards traverse a perspective staircase path; one focuses while the others move back, blur and fade. Light-up nerve branches terminate at the actual project cards.
+- Mobile (<=900px): natural scrolling cards; no scroll hijacking. For `prefers-reduced-motion: reduce`, all four cards become a static accessible grid/list and decorative motion stops.
+- Design theme: high-contrast sunset-orange/red hero inspired by the supplied reference, transitioning into deep indigo, pearlescent bone, cyan, gold, pink and violet.
+- All canvas visuals are decorative (`aria-hidden`); every case study has a semantic text heading and standard links.
 
 ## Features / decisions
 
@@ -33,4 +41,4 @@ This site is a standalone portfolio upgrade because the connected Lovable worksp
 
 ## GitHub and Vercel
 
-Source repository: [Mutethia-glitch/portfolio](https://github.com/Mutethia-glitch/portfolio). The files are at the repository root. For deployment, import this repository into Vercel using the **Other** framework preset, without a build command; the static site and `vercel.json` are deployment-ready. Keep preview and production deployments separate until verified.
+Source repository: [Mutethia-glitch/portfolio](https://github.com/Mutethia-glitch/portfolio). Production site: [portfolio-mutethia-glitchs-projects.vercel.app](https://portfolio-mutethia-glitchs-projects.vercel.app). The files are at the repository root. For deployment, import this repository into Vercel using the **Other** framework preset, without a build command; the static site and `vercel.json` are deployment-ready. Keep preview and production deployments separate until verified.

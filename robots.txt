@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://mutethia-portfolio-kinetic.vercel.app/sitemap.xml
+Sitemap: https://portfolio-mutethia-glitchs-projects.vercel.app/sitemap.xml
