@@ -1,0 +1,156 @@
+/* SUNSET EDITION — color/typography layer over the original Kinetic portfolio.
+   The original slideshow, orb, navigation, cards, case-study pages and JS structure remain intact.
+   Inspired by the user's orange / vermilion editorial reference. */
+:root {
+ --bg:#100e19;
+ --bg2:#171423;
+ --paper:#fff4ec;
+ --muted:#c6bbc4;
+ --dim:#a38c9f;
+ --line:rgba(255,220,218,.17);
+ --lime:#ffae7d;   /* warm accent: keeps original CSS variable API intact */
+ --cyan:#86e4ed;
+ --rose:#ff72ac;
+ --violet:#bba1ff;
+ --gold:#ffd18d;
+ --font:'Space Grotesk',system-ui,sans-serif;
+}
+body {background:var(--bg);color:var(--paper)}
+::selection{background:#ffd08c;color:#43152c}
+a:focus-visible,button:focus-visible {outline-color:var(--cyan)}
+.noise {opacity:.045}
+/* Fixed navigation: readable on both vermilion hero and indigo content */
+.nav{background:rgba(37,16,27,.83);border-bottom-color:rgba(255,218,215,.18)}
+.nav .logo{color:#fff7ef}
+.nav .logo strong{color:var(--gold)}
+.nav .logo span{color:#f9bbaa}
+.navlinks a{color:#f7d7d1}
+.navlinks a:hover,.nav-cta:hover{color:var(--gold)}
+.nav-cta{border-color:rgba(255,238,230,.45);color:#fff3e9;border-radius:40px}
+.nav-cta:hover{border-color:var(--gold)}
+.availability{color:#fbd6c8}
+.availability i{background:var(--gold);box-shadow:0 0 14px rgba(255,208,140,.65)}
+.mobile-menu{border-color:rgba(255,239,225,.35);color:#fff7f2}
+/* Bright editorial first fold. Keep original moving 3D orb; no spine staircase. */
+.hero{
+ background:linear-gradient(111deg,#ea4b13 0%,#c62818 35%,#89202b 68%,#291329 100%);
+ border-bottom-color:rgba(255,221,210,.3);
+ color:#fffafa;
+}
+.hero::before{
+ background:radial-gradient(ellipse at 22% 21%,rgba(255,200,97,.34),transparent 44%),
+ radial-gradient(ellipse at 83% 46%,rgba(255,61,113,.22),transparent 52%),
+ linear-gradient(180deg,transparent 68%,rgba(28,13,33,.39));
+}
+.hero-grid{opacity:.3;background-image:linear-gradient(90deg,transparent 96%,rgba(255,244,230,.15) 96%),linear-gradient(0deg,transparent 96%,rgba(255,244,230,.15) 96%)}
+.hero-gridline{background:rgba(255,244,234,.17)}
+.hero h1{color:#fffaf7;text-shadow:0 8px 48px rgba(75,7,23,.18)}
+.hero h1 em{-webkit-text-stroke:1.35px rgba(255,244,236,.94)}
+.hero .hero-desc{color:#fff0e7}
+.hero-technical .muted{color:#ffddd2}
+.hero .eyebrow{color:#fff4ec}
+.status-chip{background:rgba(255,250,240,.12);border-color:rgba(255,251,238,.5);color:#fffaf4}
+.hero-actions .btn-primary{background:#fffaf2;color:#ad321c;border-color:#fffaf2}
+.hero-actions .btn-primary:hover{background:#ffdfc0;border-color:#ffdfc0}
+.hero-actions .btn-ghost{color:#fff8f2;border-color:rgba(255,241,232,.56)}
+.hero-actions .btn-ghost:hover{border-color:#fff8f2}
+.btn-primary,.btn-ghost{border-radius:40px}
+.hero-orb{mix-blend-mode:screen;opacity:.81}
+.hero .scroll-note,.hero .coords{color:#fff1e8}
+.hero .scroll-note i{background:linear-gradient(#ffe1ae,transparent)}
+/* Bright accent ribbon between hero and work. */
+.ticker{background:#251322;border-bottom-color:rgba(255,160,130,.28)}
+.ticker-track{color:#f6d0cd}
+.ticker-track b{color:var(--gold)}
+/* Work: burnt-sienna highlights atop plum-black gallery, not neon green. */
+#work{background:radial-gradient(ellipse at 95% 3%,rgba(255,99,115,.13),transparent 38%),
+ linear-gradient(180deg,#120f1c 0%,#161225 65%,#120f1d 100%)}
+.section-label,.eyebrow,.read-link{color:var(--lime)}
+.section-title em{color:#cdacc8}
+.section-description,.showcase-copy{color:var(--muted)}
+.showcase{background:linear-gradient(130deg,#2b1829,#161323 64%,#11111b);border-color:rgba(255,204,195,.21);box-shadow:0 25px 90px rgba(9,5,18,.24)}
+.showcase-meta{color:#c7aeba}
+.showcase-index{color:var(--gold)}
+.showcase-type{color:var(--gold)}
+.showcase-stage{background:radial-gradient(ellipse at center,rgba(255,125,121,.20),transparent 54%),radial-gradient(ellipse at 78% 20%,rgba(125,110,245,.15),transparent 40%)}
+.showcase-stage:before{border-color:rgba(255,226,205,.12)}
+.showcase-stage:after{background:linear-gradient(90deg,#1f1726 0,transparent 22%)}
+.screen-card{background:#161725;border-color:rgba(255,224,220,.3);box-shadow:0 60px 100px rgba(9,5,21,.57),0 0 72px rgba(255,163,129,.11)}
+.browser-bar{background:#201c2c;border-bottom-color:rgba(255,200,198,.18)}
+.browser-bar i{background:#b1879c}
+.browser-bar span{color:#e5c8ce}
+.image-fallback{background:radial-gradient(circle at center,#48283a,#191526 80%)}
+.image-fallback strong{color:var(--gold)}
+.tag{border-color:rgba(255,214,201,.2);color:#e8ced4}
+.slide-dot[aria-current='true']{border-color:var(--gold);color:var(--gold)}
+.slide-dot:hover{border-color:var(--cyan);color:var(--cyan)}
+.work-card{background:#1b1728;border-color:rgba(255,210,200,.18)}
+.work-card:hover{border-color:rgba(255,176,129,.67);box-shadow:0 20px 60px rgba(255,110,130,.08)}
+.work-card figure{background:#291b2d}
+.work-card .chip{color:var(--gold);border-color:rgba(255,209,141,.3)}
+.work-card .work-img-fallback{color:var(--gold)}
+.work-card .arrow{color:var(--gold)}
+/* Philosophy and skills: keep a cool atmospheric contrast after the hot hero. */
+.manifesto{background:radial-gradient(ellipse at 79% 8%,rgba(127,101,244,.23),transparent 36%),linear-gradient(145deg,#171326,#1b1a35 70%,#131728)}
+.manifesto .big-quote i{color:var(--cyan)}
+.manifesto .ghost-ring{border-color:rgba(185,151,255,.24);box-shadow:0 0 0 75px rgba(162,129,246,.035),0 0 0 150px rgba(162,129,246,.025)}
+#about{background:radial-gradient(ellipse at 4% 6%,rgba(255,121,171,.13),transparent 38%),linear-gradient(155deg,#171329,#131520)}
+.skills h2{color:#fff8ef}
+.quote-big b{color:var(--gold)}
+/* Contact section is intentionally bright: makes the ending inviting. */
+.contact{background:linear-gradient(118deg,#ffbd91 0%,#f78580 42%,#ed646f 82%,#dc527d 100%);color:#301323}
+.contact::before{content:'';position:absolute;right:-260px;bottom:-330px;width:800px;height:800px;border:1px solid rgba(255,252,241,.35);border-radius:50%;box-shadow:0 0 0 65px rgba(255,252,241,.06),0 0 0 130px rgba(255,252,241,.04);pointer-events:none}
+.contact .eyebrow{color:#552133}
+.contact h2{color:#341b28}
+.contact h2 em{-webkit-text-stroke:1.4px rgba(52,27,40,.68)}
+.contact .action{background:#2e1c2c;color:#fff0e5;border-color:#2e1c2c;border-radius:40px}
+.contact .action:hover{background:#3f223f}
+.contact .small{color:#5b2941}
+.footer{color:#ac91a8}
+.footer a:hover{color:var(--gold)}
+/* All four original case studies inherit the matching color system. */
+.case-hero{background:radial-gradient(ellipse at 83% 2%,rgba(244,104,114,.22),transparent 46%),linear-gradient(160deg,#271625,#151323 76%)}
+.case-picture{background:#261c30;border-color:rgba(255,208,202,.25)}
+.case-picture img{background:#191827}
+.case-picture figcaption{background:#251b2a}
+.case-body{background:transparent}
+.case-text p{color:#d3bfca}
+.case-text section .num{color:var(--gold)}
+.case-next{background:#191322}
+.case-next .link:hover{color:var(--cyan)}
+/* Fix clamp font shorthand inconsistencies on Chromium/WebKit without changing layout. */
+.hero h1{font-family:var(--font);font-size:clamp(66px,8.2vw,137px);font-weight:600;line-height:.93}
+.section-title{font-family:var(--font);font-size:clamp(45px,6vw,82px);font-weight:600;line-height:1.02}
+.showcase-title{font-family:var(--font);font-size:clamp(52px,5.8vw,90px);font-weight:600;line-height:1.01}
+.manifesto .big-quote{font-family:var(--font);font-size:clamp(51px,8vw,124px);font-weight:500;line-height:.99}
+.skills h2{font-family:var(--font);font-size:clamp(50px,6vw,77px);font-weight:600;line-height:1.05}
+.quote-big{font-family:var(--font);font-size:clamp(29px,3vw,45px);font-weight:500;line-height:1.27}
+.contact h2{font-family:var(--font);font-size:clamp(66px,9.2vw,155px);font-weight:600;line-height:.93}
+.case-hero h1{font-family:var(--font);font-size:clamp(72px,10vw,160px);font-weight:600;line-height:.95}
+.case-sub{font-family:var(--font);font-size:clamp(23px,2.6vw,39px);font-weight:400;line-height:1.3}
+.case-text h2{font-family:var(--font);font-size:clamp(35px,4vw,58px);font-weight:600;line-height:1.12}
+.case-next .link{font-family:var(--font);font-size:clamp(52px,7vw,99px);font-weight:600;line-height:1}
+@media(min-width:701px){
+  .hero-content{padding-top:135px;padding-bottom:85px}
+  .hero h1{font-size:clamp(68px,7.5vw,123px)}
+  .hero-technical{margin-bottom:23px}
+  .hero .hero-desc{margin-top:27px;margin-bottom:21px}
+}
+@media(max-width:980px){
+  .hero h1{font-size:clamp(65px,9vw,110px)}
+  .hero-orb{opacity:.43}
+}
+@media(max-width:700px){
+  .hero h1{font-size:clamp(52px,12.3vw,81px)}
+  .hero-orb{opacity:.28;mix-blend-mode:screen}
+  .section-title{font-size:clamp(42px,11vw,62px)}
+  .showcase-title{font-size:clamp(55px,13vw,79px)}
+  .manifesto .big-quote{font-size:clamp(49px,11vw,78px)}
+  .skills h2{font-size:clamp(49px,12vw,65px)}
+  .contact h2{font-size:clamp(61px,13vw,105px)}
+  .case-hero h1{font-size:clamp(61px,12vw,105px)}
+  .case-sub{font-size:24px}
+  .case-text h2{font-size:42px}
+  .case-next .link{font-size:clamp(46px,11vw,70px)}
+}
+@media(prefers-reduced-motion:reduce){.hero-orb{opacity:.43}}
